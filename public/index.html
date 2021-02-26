@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap" a=1>
+        <span style="color: red;" class="name">
+            {{name}}
+        </span>
+    </div>
+    <script src="../dist/umd/vue.js"></script>
+    <script>
+        let vm=new Vue({
+            el:'#wrap',
+            data(){
+               return {
+                    name:'jack',
+                    arr:[1,2,3,{a:1}]
+                }
+            }
+        })
+        vm.arr.push({b:2})
+    </script>
+</body>
+</html>
